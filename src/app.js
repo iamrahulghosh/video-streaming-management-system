@@ -21,6 +21,12 @@ app.use(express.urlencoded({
     "extended": true
 }))
 
-app.use(express.static("public/temp"))
+app.use(express.static("public"))
+
+
+
+import userRouter from "./routes/user.route.js"
+
+app.use("/api/v1/user", userRouter)
 
 export default app
